@@ -5,11 +5,29 @@
     <body>
         <h1>Blackjack</h1>
         <p id="message-el">Want to play a round?</p>
-        <p id="cards-el">Cards:</p>
-        <p id="sum-el">Sum:</p>
-        <button onclick="startGame()">START GAME</button>
-        <button onclick="newCard()">NEW CARD</button>
-        <p id="player-el"></p>
-        <script src="index.js"></script>
+        
+        <div Class="dealer-hand">
+            <h2>Dealer Hand</h2>
+            <div id="dealer-card">Cards: </div>
+            <div id="dealer-sum">Sum:</div>
+        </div>
+
+        <div>
+            <h2>Player Hand</h2>
+            <div id="player-card">Cards:</div>
+            <div id="player-sum">Sum:</div>
+            <br>
+        </div>
+        <div>
+            <button onclick="startGame()">START GAME</button>
+            <button onclick="newCard()">NEW CARD</button>
+            <button onclick="stand()">STAND</button>
+        </div>
+
+        <p id="player-id"></p>
+        <input type="number" id="deposit-amount" placeholder="Enter $ Money">
+        <button id="depositBtn" onclick="depositMoney()">Deposit Money</button>
+        <p id="bet-message"> win price: 10$ / bet amount: 10$</p>
+        <script defer src="index.js"></script>
     </body>
 </html>
